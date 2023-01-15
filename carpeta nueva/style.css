@@ -11,6 +11,8 @@ body{
     "header header"
     "aside colorPrincipal"
     "cajas cajas";
+    margin: 2rem 15rem;
+    box-shadow: 0 0 15px var(--principal);
 }
 
 
@@ -21,10 +23,11 @@ body > header{
     align-items: center;
     background-color: var(--background);
     margin-bottom: 2rem;
-    box-shadow: 0 0 15px black;
+    box-shadow: 0 0 15px var(--principal);
     border-bottom: 10px solid var(--principal);
     font-size: 28px;
     padding-top: 1rem;
+    border-radius: 15px;
 }
 header h1 {
     text-shadow: 0 0 10px black;
@@ -85,7 +88,7 @@ aside ol h3 {
     border-radius: 5px;
     box-shadow: 0 0 15px var(--principal);
     margin-right: 1rem;
-    width: 50rem;
+    width: 60rem;
     justify-self: flex-end;
 }
 .colorPrincipal h2 {
@@ -115,19 +118,100 @@ aside ol h3 {
 
 }
 
-@media (max-width: 1600px) {
+
+
+
+@media (max-width: 1564px) {
+    body {
+        box-shadow: 0 0 15px var(--principal);
+    }
     .colorPrincipal{
-        width: 30rem;
+        width: 40rem;
+    }
+    .cajas div {
+        width: 10rem;
+        height: 10rem;
+    
     }
 }
-@media (max-width: 1440px) {
-    .colorPrincipal{
-        width: 25rem;
+@media (max-width: 1280px) {
+    body {
+        margin: 0;
     }
-}
-@media (max-width: 1355px) {
     .colorPrincipal{
-        width: 20rem;
+        width: 40rem;
+    }
+    .cajas div {
+        width: 10rem;
+        height: 10rem;
+    
     }
 }
 
+@media (max-width: 1024px) {
+    body {
+        box-shadow: none;
+    }
+    .colorPrincipal{
+        width: 40rem;
+    }
+    .cajas div {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+@media (max-width: 820px) {
+    .colorPrincipal{
+        width: 30rem;
+    }
+    .colorPrincipal h2 {
+        font-size: 18px;
+    }
+    aside{
+        width: 15rem;
+    }
+    .cajas div {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+/*version mobile*/
+@media (max-width: 400px) {
+    body{
+        display: grid;
+        grid-template-rows: 6rem 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header header"
+        "aside aside"
+        "colorPrincipal colorPrincipal"
+        "cajas cajas";
+    }
+    header h1 {
+        font-size: 30px;
+    }
+    aside{
+        grid-area: aside;
+        width: 12rem;
+        border: none;
+        margin: 1rem auto;
+        background: none;
+        padding: 5px;
+    }
+    aside h2 {
+        font-size: 28px;
+    }
+    aside h3 {
+        font-size: 18px;
+    }
+    .colorPrincipal{
+        grid-area: colorPrincipal;
+        margin: 0 auto;
+        width: 20rem;
+    }
+    .cajas div {
+        width: 4rem;
+        height: 4rem;
+    }
+}

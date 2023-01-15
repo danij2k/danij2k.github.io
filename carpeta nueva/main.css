@@ -8,8 +8,6 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--background);
     max-width: 1523px;
-    margin: 0 20rem;
-    box-shadow: 0 0 15px var(--principal);
     border-radius: 15px;
 }
 :root {

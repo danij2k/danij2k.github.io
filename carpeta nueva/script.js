@@ -21,7 +21,6 @@ function rnColor() {
     let b = randomInt(255);
     let mainColor = `rgb(${r}, ${g}, ${b})`;
 
-
     for (let i = 0; i < boxs.length; i++) {
         if (i == randomInt(boxs.length)) {
             boxs[i].style.background = mainColor;
