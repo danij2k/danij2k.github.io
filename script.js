@@ -2,7 +2,6 @@
 
 let principalBox = document.querySelector(".colorPrincipal");
 let boxs = document.querySelectorAll("div");
-
 let aciertos = document.querySelector(".aciertos");
 let desaciertos = document.querySelector(".desaciertos");
 let aside = document.querySelector("aside")
@@ -30,16 +29,10 @@ function rnColor() {
         }
     }
     document.getElementById("rgb").innerHTML = mainColor;
-    // return `rgb(${Math.floor(Math.random() *   25)}, 
-    // ${Math.floor(
-    //   Math.random() *  25)},
-    //     ${Math.floor(
-    //     Math.random() *   35)})`;
 }
 rnColor();
 //function para dar colores a los boxs
 function rnColorCajas() {
-
     for (let i = 0; i < boxs.length; i++) {
         boxs[i].style.background = rnColor();
         principalBox.style.background = boxs[numRandon].style.background
@@ -49,11 +42,7 @@ rnColorCajas()
 //function para comparar el background de los elementos
 function compareColor () {
     for (const box of boxs) {
-        box.addEventListener("click", () => {
-            
-            console.log("CajaClikeada ",box.style.background);  
-            console.log("CajaPrincipal ",principalBox.style.background);
-            
+        box.addEventListener("click", () => {    
             if(box.style.background !== principalBox.style.background){
                 console.log(false);
                 reduceScore ()
@@ -120,8 +109,3 @@ function endGame(){
         resetScoreR();   
     }   
 }
-
-
-
-
-
