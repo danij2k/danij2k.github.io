@@ -9,6 +9,7 @@ body {
     background-color: var(--background);
     max-width: 1523px;
     border-radius: 15px;
+    
 }
 :root {
     --background: rgb(10, 21, 70);
